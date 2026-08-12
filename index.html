@@ -3,37 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chuyên Khoa Sản Phụ Khoa - Chăm Sóc Sức Khỏe Toàn Diện</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Bs. Nguyễn Long Giang | Personal Portfolio & Clinical Tech</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #0e7490;
-            --primary-hover: #155e75;
-            --accent-color: #f43f5e;
-            --bg-light: #f8fafc;
-            --text-dark: #1e293b;
-            --text-muted: #64748b;
+            --primary: #0284c7;
+            --primary-dark: #0369a1;
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --border: #334155;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
         }
 
         body {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
+            background-color: var(--bg);
+            color: var(--text-main);
             line-height: 1.6;
+            padding: 2rem 1rem;
         }
 
-        /* Header Navigation */
-        header {
-            background: #ffffff;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Profile Header */
+        .profile-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .profile-info h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.3rem;
+            color: var(--text-main);
+        }
+
+        .profile-info .subtitle {
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+        }
+
+        .profile-info p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.2rem;
+        }
+
+        .social-links a {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+        }
+
+        /* Section Layout */
+        .section-title {
+            font-size: 1.3rem;
+            margin: 2rem 0 1rem 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--accent);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+        }
+
+        .card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: #0284c720;
+            color: var(--accent);
+            padding: 0.2rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            border: 1px solid #0284c740;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 640px) {
+            .profile-card {
+                flex-direction: column;
+                text-align: center;
+            }
+            .social-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header / Bio -->
+        <div class="profile-card">
+            <div class="avatar">
+                <i class="fa-solid fa-user-md"></i>
+            </div>
+            <div class="profile-info">
+                <h1>Nguyễn Long Giang</h1>
+                <div class="subtitle">Medical Doctor & HealthTech Enthusiast</div>
+                <p>Bác sĩ lâm sàng chuyên ngành Sản Phụ Khoa. Đam mê ứng dụng công nghệ thông tin, tự động hóa quy trình lâm sàng và phát triển các công cụ hỗ trợ y tế.</p>
+                
+                <div class="social-links">
+                    <a href="https://github.com/nglonggiang" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="mailto:email-cua-ban@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="#" title="Research & Writing"><i class="fa-solid fa-book-medical"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Projects & Workflows -->
+        <h2 class="section-title"><i class="fa-solid fa-laptop-code"></i> Dự Án & Công Nghệ Y Tế</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Clinical Workflow Automation</h3>
+                <p>Tối ưu hóa quy trình quản lý hồ sơ khám bệnh và theo dõi bệnh nhân bằng các giải pháp tự động hóa lightweight.</p>
+                <div class="tags">
+                    <span class="tag">Workflow</span>
+                    <span class="tag">EMR</span>
+                    <span class="tag">Automation</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Ob-Gyn Research & Notes</h3>
+                <p>Hệ thống tổng hợp tài liệu, phác đồ điều trị và cập nhật kiến thức chuyên sâu ngành Sản Phụ Khoa.</p>
+                <div class="tags">
+                    <span class="tag">ObGyn</span>
+                    <span class="tag">Medical Notes</span>
+                    <span class="tag">Research</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>Homelab & Medical Server</h3>
+                <p>Thử nghiệm triển khai các hệ thống quản lý y tế mã nguồn mở trên hạ tầng server cá nhân tự vận hành.</p>
+                <div class="tags">
+                    <span class="tag">Docker</span>
+                    <span class="tag">Self-Hosted</span>
+                    <span class="tag">Linux</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Focus Areas -->
+        <h2 class="section-title"><i class="fa-solid fa-stethoscope"></i> Định Hướng Chuyên Môn</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Sản Khoa Lâm Sàng</h3>
+                <p>Theo dõi thai kỳ nguy cơ, tư vấn chăm sóc sức khỏe thai sản và tầm soát dị tật thai nhi chuẩn y khoa.</p>
+            </div>
+            <div class="card">
+                <h3>Phụ Khoa & Tầm Soát</h3>
+                <p>Nghiên cứu các phương pháp tầm soát sớm bệnh lý phụ khoa và ứng dụng siêu âm chẩn đoán hình ảnh.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Nguyễn Long Giang. Hosted on GitHub Pages via <a href="https://is-a.dev" style="color: var(--accent); text-decoration: none;">is-a.dev</a>.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
             z-index: 100;
         }
 
