@@ -20,7 +20,7 @@ Trang web cá nhân chia sẻ về định hướng chuyên môn **Sản Phụ K
 
 - **Frontend:** HTML5, CSS3, JavaScript.
 - **Hosting:** GitHub Pages.
-- **Domain:** Managed via `is-a-dev` project (`1996.is-a.dev`).
+- **Domain:** Managed via `is-a-dev` project (`sanphukhoa.is-a.dev`).
 
 ---
 
