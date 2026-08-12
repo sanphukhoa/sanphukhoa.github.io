@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyên Khoa Sản Phụ Khoa - Chăm Sóc Sức Khỏe Toàn Diện</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0e7490;
+            --primary-hover: #155e75;
+            --accent-color: #f43f5e;
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Header Navigation */
+        header {
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .contact-btn {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .contact-btn:hover {
+            background: var(--primary-hover);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+            padding: 4rem 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            color: #0f172a;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.75rem;
+            margin-bottom: 2.5rem;
+            color: var(--text-dark);
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 1.8rem;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: #e0f2fe;
+            color: var(--primary-color);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Schedule & Info Section */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .info-box h3 {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+        }
+
+        .schedule-list {
+            list-style: none;
+        }
+
+        .schedule-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.6rem 0;
+            border-bottom: 1px dashed #e2e8f0;
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+
+        footer strong {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-user-doctor"></i>
+                <span>Sản Phụ Khoa</span>
+            </div>
+            <a href="tel:0900000000" class="contact-btn"><i class="fa-solid fa-phone"></i> Liên Hệ Tư Vấn</a>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Chăm Sóc Sức Khỏe Toàn Diện Cho Phụ Nữ</h1>
+            <p>Đồng hành cùng bạn trong thai kỳ an toàn, tư vấn chăm sóc sức khỏe sinh sản chuẩn y khoa và bảo mật thông tin.</p>
+        </div>
+    </section>
+
+    <!-- Content Area -->
+    <div class="container">
+        <h2 class="section-title">Dịch Vụ Chuyên Khoa</h2>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-baby"></i></div>
+                <h3>Quản Lý Thai Kỳ</h3>
+                <p>Khám thai định kỳ, theo dõi sự phát triển của thai nhi và tư vấn dinh dưỡng chuẩn y khoa suốt thai kỳ.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-wave-square"></i></div>
+                <h3>Siêu Âm & Chẩn Đoán</h3>
+                <p>Thực hiện các kỹ thuật siêu âm tầm soát hình thái thai nhi và đánh giá sức khỏe phụ khoa chuyên sâu.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"><i class="fa-solid fa-notes-medical"></i></div>
+                <h3>Khám Phụ Khoa</h3>
+                <p>Tầm soát các bệnh lý phụ khoa thường gặp, tư vấn phòng ngừa và điều trị an toàn, hiệu quả.</p>
+            </div>
+        </div>
+
+        <!-- Schedule & Contact Info -->
+        <div class="info-grid">
+            <div class="info-box">
+                <h3><i class="fa-solid fa-clock"></i> Lịch Làm Việc</h3>
+                <ul class="schedule-list">
+                    <li><span>Thứ 2 - Thứ 6:</span> <strong>08:00 - 17:00</strong></li>
+                    <li><span>Thứ 7:</span> <strong>08:00 - 12:00</strong></li>
+                    <li><span>Chủ nhật & Ngày lễ:</span> <strong>Nghỉ</strong></li>
+                </ul>
+            </div>
+
+            <div class="info-box">
+                <h3><i class="fa-solid fa-location-dot"></i> Thông Tin Liên Hệ</h3>
+                <p style="margin-bottom: 0.8rem;"><i class="fa-solid fa-map-pin"></i> <strong>Địa chỉ:</strong> Hà Nội, Việt Nam</p>
+                <p style="margin-bottom: 0.8rem;"><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> contact@sanphukhoa.dev</p>
+                <p><i class="fa-solid fa-shield-halved"></i> <strong>Cam kết:</strong> Bảo mật tuyệt đối dữ liệu y tế cá nhân.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Chuyên Trang Sản Phụ Khoa. Thông tin chỉ mang tính chất tham khảo y khoa.</p>
+    </footer>
+
+</body>
+</html>
